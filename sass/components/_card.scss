@@ -1,0 +1,99 @@
+.card{
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 20rem;
+
+  &_side{
+    // display: inline-block;
+    height: 18rem;
+    width: 80%;
+    color:black;
+    transition: all .8s ease-out;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1rem 2rem rgba($dark-grey,.3);
+
+    &_front{
+      background-color:white;
+
+      
+    }
+    &_back{
+      transform: rotateY(180deg);
+
+      &_1{
+        background-image: linear-gradient(to right bottom, $gradient-yellow2, $gradient-yellow1);
+      }
+      &_2{
+        background-image: linear-gradient(to right bottom, $gradient-yellow2, $gradient-yellow1);
+      }
+      &_3{
+        background-image: linear-gradient(to right bottom, $gradient-yellow2, $gradient-yellow1);
+      }
+    }
+  }
+  &_heading{
+    text-transform: uppercase;
+    color: white;
+    font-weight: lighter;
+    font-size:1rem;
+    text-align: right;
+    position: absolute;
+    top: 4rem;
+    right: 1.5rem;
+    width: 75%;
+  }
+  &_heading-span{
+    padding:.5rem 1rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &-1{
+      background-image: linear-gradient(to right bottom, rgba($gradient-yellow2,.75), rgba($gradient-yellow1,.75));
+    }
+
+  }
+  &_details{
+    color: $font-grey;
+    font-size: .8rem;
+    ul{
+      list-style: none;
+      width: 80%;
+      li{
+        text-align: center;
+        padding: 1rem;
+      }
+    }
+  }
+  &:hover &_side_front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &_side_back{
+    transform: rotateY(0deg);
+  }
+
+  &_picture{
+    background-size:cover;
+    height: 8rem;
+    background-blend-mode: color;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%, 0 100%);
+    &-1{
+      background-image: linear-gradient(to right bottom, $gradient-yellow2, $gradient-yellow1),url('../images/round-chocolate.jpg');
+    }
+    &-2{
+      background-image: url(../images/round-chocolate.jpg);
+    }
+    &-3{
+      background-image: url(../images/round-chocolate.jpg);
+    }
+  }
+  // &-front,&-back{
+  //   display: inline-block;
+  // }
+}

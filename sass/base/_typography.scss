@@ -1,0 +1,55 @@
+body {
+  /* font-family: 'Karla', sans-serif; */
+  font-family: 'Lato', sans-serif;
+  line-height: 1.8;
+  font-weight: normal;
+  color: #706c61;
+  padding: 1rem;
+}
+
+.header-heading{
+  &--main{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4.5rem;
+    font-family: 'Karla', sans-serif;
+    letter-spacing: 2rem;
+    font-weight: lighter;
+    color: white;
+  }
+
+  &--sub{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Karla', sans-serif;
+    letter-spacing: 1.6rem;
+    /* color: #f1f1b0; */
+    color: white;
+  }
+}
+.secondary-heading{
+  display: inline-block;
+  background-image: linear-gradient(to right, $light-brown,$font-grey, $light-yellow);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: $secondary;
+  font-family: 'Karla',sans-serif;
+  text-transform: uppercase;
+}
+
+.tertiary-heading{
+  font-size: $quard;
+  font-family: 'Karla',sans-serif;
+  text-transform: uppercase;
+}
+
+.about-paragraph,.btn-text{
+  font-size: .8rem;
+}
+
+.tertiary{
+  margin-bottom: $quard-margin;
+  text-transform: uppercase;
+  font-size: .7rem;
+}

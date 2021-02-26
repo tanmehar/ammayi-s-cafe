@@ -1,0 +1,52 @@
+.header{
+  height: 97vh;
+  background-size: cover;
+  background-position: center top;
+  background-image: linear-gradient(rgba($dark-grey,.3), rgba($black,.6)),url('../images/coffee header.jpg');
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75%, 0 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 75%, 0 100%, 0 100%);
+  text-align: center;
+
+  &_textbox{
+    /* height: 145px; */
+    width: 100%;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: .95;
+
+    backface-visibility: hidden;
+  }
+  &-heading{
+    &--main{
+      display: inline-block;
+      animation-name: head_main_left;
+      animation-duration: 2.5s;
+      /* animation-delay: .5s; */
+      animation-timing-function: ease-out;
+
+    }
+    &--sub{
+      display: inline-block;
+      margin-bottom: 1rem;
+      animation-name: head_sub_right;
+      animation-duration: 3s;
+      /* animation-delay: .2s; */
+      animation-timing-function: ease-out;
+    }
+  }
+}
+
+  .logo{
+    &_top{
+      height: 6rem;
+    }
+
+    &_box{
+      position: absolute;
+      left: 2.8rem;
+      top: 2.8rem;
+    }
+  }
